@@ -40,19 +40,19 @@ class SignInViewModelWithCredentials {
     }
     
     func login() {
-        state = .loading
-        UserService.sharedInstance
-            .login(email,
-                   password: password,
-                   success: { [weak self] in
-                    guard let self = self else { return }
-                    self.state = .idle
-                    AnalyticsManager.shared.identifyUser(with: self.email)
-                    AnalyticsManager.shared.log(event: Event.login)
-                    AppNavigator.shared.navigate(to: HomeRoutes.home, with: .changeRoot)
-                },
-                   failure: { [weak self] error in
-                    self?.state = .error(error.localizedDescription)
-            })
+//        state = .loading
+//        UserService.sharedInstance
+//            .login(email,
+//                   password: password,
+//                   success: { [weak self] in
+//                    guard let self = self else { return }
+//                    self.state = .idle
+//                    AnalyticsManager.shared.identifyUser(with: self.email)
+//                    AnalyticsManager.shared.log(event: Event.login)
+//                    AppNavigator.shared.navigate(to: HomeRoutes.home, with: .changeRoot)
+//                },
+//                   failure: { [weak self] error in
+//                    self?.state = .error(error.localizedDescription)
+//            })
     }
 }

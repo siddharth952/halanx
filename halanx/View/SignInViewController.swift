@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import SwiftyJSON
+
 import Alamofire
 
-class SignInViewController: UIViewController, {
+class SignInViewController: UIViewController {
     
     //Constants
     let AUTH_URL = "http://testapi.halanx.com/rest-auth/login/"
@@ -40,7 +40,7 @@ class SignInViewController: UIViewController, {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-     MARK: - Actions
+     //MARK: - Actions
     
     @IBAction func credentialsChanged(_ sender: UITextField) {
         let newValue = sender.text ?? ""
@@ -73,20 +73,20 @@ func getLoginData(url: String, parameters:[String:String]){
 }
 
 
-extension SignInViewController: SignInViewModelDelegate {
-    func didUpdateCredentials() {
-        setLoginButton(enabled: viewModel.hasValidCredentials)
-    }
+//extension SignInViewController: SignInViewModelDelegate {
+//    func didUpdateCredentials() {
+//        setLoginButton(enabled: viewModel.hasValidCredentials)
+//    }
 
-    func didUpdateState() {
-        switch viewModel.state {
-        case .loading:
-            UIApplication.showNetworkActivity()
-        case .error(let errorDescription):
-            UIApplication.hideNetworkActivity()
-            showMessage(title: "Error", message: errorDescription)
-        case .idle:
-            UIApplication.hideNetworkActivity()
-        }
-    }
-}
+   // func didUpdateState() {
+        //switch viewModel.state {
+       // case .loading:
+           // UIApplication.showNetworkActivity()
+       // case .error(let errorDescription):
+           // UIApplication.hideNetworkActivity()
+           // showMessage(title: "Error", message: errorDescription)
+       // case .idle:
+           // UIApplication.hideNetworkActivity()
+       // }
+//    }
+//}
