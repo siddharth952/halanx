@@ -14,9 +14,7 @@ class SignInViewController: UIViewController {
     
     //Constants
     let AUTH_URL = "http://testapi.halanx.com/rest-auth/login/"
-    let APP_ID = ""
-    
-
+    let APP_ID:JSON = "0f948ebc7f620891adde46a8b1d1049cc7d56fcc"
     
     // MARK: - Outlets
 
@@ -26,7 +24,7 @@ class SignInViewController: UIViewController {
     
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()     
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -57,7 +55,7 @@ func Login(_ user:String,_ pwd:String){
         "password": "\(pwd)"
     ]
     
-    Alamofire.request("http://testapi.halanx.com/rest-auth/login/", method: .post, parameters: parameters)
+    Alamofire.request(AUTH_URL, method: .post, parameters: parameters)
         .responseJSON { response in
             if response.result.isSuccess{
              
@@ -65,24 +63,16 @@ func Login(_ user:String,_ pwd:String){
                 
                 let KeyJSON: JSON = JSON(response.result.value!)
                 print(KeyJSON)
-                if(KeyJSON["key"] == "0f948ebc7f620891adde46a8b1d1049cc7d56fcc"){ self.performSegue(withIdentifier: "toHome", sender: self)
+                if(KeyJSON["key"] == self.APP_ID){ self.performSegue(withIdentifier: "toHome", sender: self)
                     
                 }else{
                     self.errorLbl.text = "You do not have authorization!"
                 }
-                
             }
             else{
                 print("Error \(response.result.error)")
                 
             }
-            
-            
-            
     }
-    
  }
-    
-    
-    
 }
