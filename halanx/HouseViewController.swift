@@ -60,8 +60,8 @@ class HouseViewController: UIViewController, UITableViewDataSource, UITableViewD
 
                     self.houses.append(House(
                             title: (housesArray[i] as AnyObject).value(forKey: "name") as? String,
-                            rent:  (housesArray[i] as AnyObject).value(forKey: "rent_from") as? String,
-                            street_address:  (housesArray[i] as AnyObject).value(forKey: "title") as? String,
+                            rent:  (housesArray[i] as AnyObject).value(forKey: "house_size") as? String,
+                            street_address:  (housesArray[i] as AnyObject).value(forKey: "furnish_type") as? String,
                             imageurl:  (housesArray[i] as AnyObject).value(forKey: "cover_pic_url") as? String
 
                     ))
