@@ -18,9 +18,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doS-jS-0Dh" customClass="MyButton" customModule="halanx" customModuleProvider="target">
-                                <rect key="frame" x="107" y="669" width="201" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="wyj-ad-Y9M">
+                                <rect key="frame" x="32" y="814" width="338" height="48"/>
+                                <accessibility key="accessibilityConfiguration" identifier="GoToSignUpButton">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="24" minY="14" maxX="24" maxY="13"/>
+                                <state key="normal" title="Don’t have an account? Let’s create one ►">
+                                    <color key="titleColor" red="0.21931966150000001" green="0.21931966150000001" blue="0.21931966150000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEZ-rG-HnK" customClass="MyButton" customModule="halanx" customModuleProvider="target">
+                                <rect key="frame" x="80" y="746" width="241" height="34"/>
+                                <color key="backgroundColor" red="0.031372549020000001" green="0.22352941179999999" blue="0.47843137250000001" alpha="0.72792701199999998" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                <state key="normal" title="FACEBOOK CONNECT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doS-jS-0Dh" customClass="MyButton" customModule="halanx" customModuleProvider="target">
+                                <rect key="frame" x="106" y="676" width="201" height="62"/>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.0" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="GoToSignInButton"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
@@ -35,32 +56,8 @@
                                     <segue destination="Djy-Qk-PYx" kind="show" id="uBe-Ea-58j"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="wyj-ad-Y9M">
-                                <rect key="frame" x="32" y="790" width="351" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" identifier="GoToSignUpButton">
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
-                                <inset key="contentEdgeInsets" minX="24" minY="14" maxX="24" maxY="13"/>
-                                <state key="normal" title="Don’t have an account? Let’s create one ►">
-                                    <color key="titleColor" red="0.21931966150000001" green="0.21931966150000001" blue="0.21931966150000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEZ-rG-HnK" customClass="MyButton" customModule="halanx" customModuleProvider="target">
-                                <rect key="frame" x="82" y="740" width="251" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.031372549020000001" green="0.22352941179999999" blue="0.47843137250000001" alpha="0.72792701199999998" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
-                                <state key="normal" title="FACEBOOK CONNECT">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hh-home" translatesAutoresizingMaskIntoConstraints="NO" id="hiV-uo-bZu" customClass="MyImage" customModule="halanx" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="-106" width="414" height="741"/>
+                                <rect key="frame" x="-45" y="-28" width="504" height="635"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
@@ -68,6 +65,18 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wyj-ad-Y9M" firstAttribute="bottom" secondItem="bMq-5n-u0y" secondAttribute="bottom" id="3D2-t6-yTO"/>
+                            <constraint firstItem="wyj-ad-Y9M" firstAttribute="top" secondItem="VEZ-rG-HnK" secondAttribute="bottom" constant="34" id="4ob-iL-ml3"/>
+                            <constraint firstItem="VEZ-rG-HnK" firstAttribute="top" secondItem="doS-jS-0Dh" secondAttribute="bottom" constant="8" id="5sv-Ek-Hri"/>
+                            <constraint firstItem="bMq-5n-u0y" firstAttribute="trailing" secondItem="wyj-ad-Y9M" secondAttribute="trailing" constant="44" id="Bts-60-vuf"/>
+                            <constraint firstItem="wyj-ad-Y9M" firstAttribute="leading" secondItem="bMq-5n-u0y" secondAttribute="leading" constant="32" id="JJE-Es-Lfu"/>
+                            <constraint firstItem="bMq-5n-u0y" firstAttribute="trailing" secondItem="VEZ-rG-HnK" secondAttribute="trailing" constant="93" id="PpE-9O-shW"/>
+                            <constraint firstItem="doS-jS-0Dh" firstAttribute="leading" secondItem="bMq-5n-u0y" secondAttribute="leading" constant="106" id="UK3-6l-jbR"/>
+                            <constraint firstItem="VEZ-rG-HnK" firstAttribute="leading" secondItem="bMq-5n-u0y" secondAttribute="leading" constant="80" id="ecQ-hK-R0O"/>
+                            <constraint firstItem="bMq-5n-u0y" firstAttribute="trailing" secondItem="doS-jS-0Dh" secondAttribute="trailing" constant="107" id="mf5-Qr-qpu"/>
+                            <constraint firstItem="wyj-ad-Y9M" firstAttribute="leading" secondItem="bMq-5n-u0y" secondAttribute="leading" constant="32" id="qnW-k4-Mkg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bMq-5n-u0y"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="MXI-hp-g4R"/>
@@ -79,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="93r-PI-lbD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1469.5652173913045" y="-1075.4464285714284"/>
+            <point key="canvasLocation" x="-1471.0144927536232" y="-1077.4553571428571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2OH-aR-03n">
@@ -397,6 +406,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hh-home" width="3894" height="2596"/>
+        <image name="hh-home" width="3725" height="1873.5"/>
     </resources>
 </document>
