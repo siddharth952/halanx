@@ -22,6 +22,7 @@ class SignInViewController: UIViewController {
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var errorLbl: UILabel!
     
 
     override func viewDidLoad() {
@@ -38,6 +39,8 @@ class SignInViewController: UIViewController {
     @IBAction func testbtn(_ sender: Any) {
         let username = usernameField.text
         let password = passwordField.text
+        errorLbl.text = ""
+        
         
         if(username == "" || password == ""){
             return
@@ -57,10 +60,17 @@ func Login(_ user:String,_ pwd:String){
     Alamofire.request("http://testapi.halanx.com/rest-auth/login/", method: .post, parameters: parameters)
         .responseJSON { response in
             if response.result.isSuccess{
+             
                 print("Success! Got key")
                 
                 let KeyJSON: JSON = JSON(response.result.value!)
                 print(KeyJSON)
+                if(KeyJSON["key"] == "0f948ebc7f620891adde46a8b1d1049cc7d56fcc"){ self.performSegue(withIdentifier: "toHome", sender: self)
+                    
+                }else{
+                    self.errorLbl.text = "You do not have authorization!"
+                }
+                
             }
             else{
                 print("Error \(response.result.error)")
