@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
 import Alamofire
+import SwiftyJSON
 
 class SignInViewController: UIViewController {
     
@@ -16,77 +16,63 @@ class SignInViewController: UIViewController {
     let AUTH_URL = "http://testapi.halanx.com/rest-auth/login/"
     let APP_ID = ""
     
-    
-    
-    // MARK: - Outlets
-    @IBOutlet weak var logIn: UIButton!
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
-    
-    
-    
-    
-    var viewModel: SignInViewModelWithCredentials!
 
     
+    // MARK: - Outlets
+
+    @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        //viewModel.delegate = self
-        setLoginButton(enabled: false)
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
+    
      //MARK: - Actions
-    
-    @IBAction func credentialsChanged(_ sender: UITextField) {
-        let newValue = sender.text ?? ""
-        switch sender {
-        case emailField:
-            viewModel.email = newValue
-        case passwordField:
-            viewModel.password = newValue
-        default: break
+    @IBAction func testbtn(_ sender: Any) {
+        let username = usernameField.text
+        let password = passwordField.text
+        
+        if(username == "" || password == ""){
+            return
         }
+        Login(username!,password!)
     }
     
-    @IBAction func tapOnSignInButton(_ sender: Any) {
-        //viewModel.login()
-    }
-    
-    func setLoginButton(enabled: Bool) {
-        logIn.alpha = enabled ? 1 : 0.5
-        logIn.isEnabled = enabled
-    }
-}
-
-
 //MARK: - Networking
-
-func getLoginData(url: String, parameters:[String:String]){
+func Login(_ user:String,_ pwd:String){
+    
+    let parameters: Parameters = [
+        "email": "",
+        "username": "\(user)",
+        "password": "\(pwd)"
+    ]
+    
+    Alamofire.request("http://testapi.halanx.com/rest-auth/login/", method: .post, parameters: parameters)
+        .responseJSON { response in
+            if response.result.isSuccess{
+                print("Success! Got key")
+                
+                let KeyJSON: JSON = JSON(response.result.value!)
+                print(KeyJSON)
+            }
+            else{
+                print("Error \(response.result.error)")
+                
+            }
+            
+            
+            
+    }
+    
+ }
     
     
     
 }
-
-
-//extension SignInViewController: SignInViewModelDelegate {
-//    func didUpdateCredentials() {
-//        setLoginButton(enabled: viewModel.hasValidCredentials)
-//    }
-
-   // func didUpdateState() {
-        //switch viewModel.state {
-       // case .loading:
-           // UIApplication.showNetworkActivity()
-       // case .error(let errorDescription):
-           // UIApplication.hideNetworkActivity()
-           // showMessage(title: "Error", message: errorDescription)
-       // case .idle:
-           // UIApplication.hideNetworkActivity()
-       // }
-//    }
-//}

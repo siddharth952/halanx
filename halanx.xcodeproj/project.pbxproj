@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		59EC528A1BAADBDB108909EF /* Pods_halanx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAA7CCA53BDA6A59756E413 /* Pods_halanx.framework */; };
-		E1250CCC22BF6261000FEF7F /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1250CCB22BF6261000FEF7F /* SignInViewModel.swift */; };
-		E1250CCE22BF62D5000FEF7F /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1250CCD22BF62D5000FEF7F /* ViewModelState.swift */; };
-		E1250CD122BF631D000FEF7F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1250CD022BF631D000FEF7F /* StringExtension.swift */; };
 		E13F6F7722BDF544001FDCCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F6F7622BDF544001FDCCE /* AppDelegate.swift */; };
 		E13F6F7922BDF544001FDCCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F6F7822BDF544001FDCCE /* ViewController.swift */; };
 		E13F6F7C22BDF544001FDCCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E13F6F7A22BDF544001FDCCE /* Main.storyboard */; };
@@ -19,15 +16,14 @@
 		E149E13E22BF48780016F911 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149E13D22BF48780016F911 /* RoundButton.swift */; };
 		E149E14122BF493D0016F911 /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149E14022BF493D0016F911 /* RoundImage.swift */; };
 		E149E14622BF58960016F911 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149E14522BF58960016F911 /* SignInViewController.swift */; };
+		E165D88322C07B78009F0C37 /* HouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E165D88222C07B78009F0C37 /* HouseViewController.swift */; };
+		E165D88522C07BEF009F0C37 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E165D88422C07BEF009F0C37 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8FAA7CCA53BDA6A59756E413 /* Pods_halanx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_halanx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F499EB60D27D351CAF57DC /* Pods-halanx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-halanx.debug.xcconfig"; path = "Target Support Files/Pods-halanx/Pods-halanx.debug.xcconfig"; sourceTree = "<group>"; };
 		B1AEAB38A5EDA2C7B7E163F9 /* Pods-halanx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-halanx.release.xcconfig"; path = "Target Support Files/Pods-halanx/Pods-halanx.release.xcconfig"; sourceTree = "<group>"; };
-		E1250CCB22BF6261000FEF7F /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
-		E1250CCD22BF62D5000FEF7F /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
-		E1250CD022BF631D000FEF7F /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		E13F6F7322BDF544001FDCCE /* halanx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = halanx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E13F6F7622BDF544001FDCCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E13F6F7822BDF544001FDCCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +34,8 @@
 		E149E13D22BF48780016F911 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		E149E14022BF493D0016F911 /* RoundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImage.swift; sourceTree = "<group>"; };
 		E149E14522BF58960016F911 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		E165D88222C07B78009F0C37 /* HouseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseViewController.swift; sourceTree = "<group>"; };
+		E165D88422C07BEF009F0C37 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,25 +63,10 @@
 			children = (
 				E149E14522BF58960016F911 /* SignInViewController.swift */,
 				E13F6F7822BDF544001FDCCE /* ViewController.swift */,
+				E165D88222C07B78009F0C37 /* HouseViewController.swift */,
+				E165D88422C07BEF009F0C37 /* DetailsViewController.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		E1250CCA22BF6248000FEF7F /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				E1250CCB22BF6261000FEF7F /* SignInViewModel.swift */,
-				E1250CCD22BF62D5000FEF7F /* ViewModelState.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		E1250CCF22BF6307000FEF7F /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				E1250CD022BF631D000FEF7F /* StringExtension.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E13F6F6A22BDF544001FDCCE = {
@@ -107,8 +90,6 @@
 		E13F6F7522BDF544001FDCCE /* halanx */ = {
 			isa = PBXGroup;
 			children = (
-				E1250CCF22BF6307000FEF7F /* Extensions */,
-				E1250CCA22BF6248000FEF7F /* ViewModel */,
 				E1250CB322BF5EEF000FEF7F /* View */,
 				E149E13F22BF48800016F911 /* UI */,
 				E13F6F7622BDF544001FDCCE /* AppDelegate.swift */,
@@ -217,16 +198,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-halanx/Pods-halanx-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -263,11 +242,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E149E13E22BF48780016F911 /* RoundButton.swift in Sources */,
+				E165D88322C07B78009F0C37 /* HouseViewController.swift in Sources */,
 				E13F6F7922BDF544001FDCCE /* ViewController.swift in Sources */,
-				E1250CCC22BF6261000FEF7F /* SignInViewModel.swift in Sources */,
 				E149E14122BF493D0016F911 /* RoundImage.swift in Sources */,
-				E1250CD122BF631D000FEF7F /* StringExtension.swift in Sources */,
-				E1250CCE22BF62D5000FEF7F /* ViewModelState.swift in Sources */,
+				E165D88522C07BEF009F0C37 /* DetailsViewController.swift in Sources */,
 				E149E14622BF58960016F911 /* SignInViewController.swift in Sources */,
 				E13F6F7722BDF544001FDCCE /* AppDelegate.swift in Sources */,
 			);
