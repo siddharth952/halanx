@@ -97,11 +97,11 @@
 		E13F6F7522BDF544001FDCCE /* halanx */ = {
 			isa = PBXGroup;
 			children = (
+				E1928BB522C1E00800E82C0B /* Model */,
 				E1250CB322BF5EEF000FEF7F /* View */,
 				E149E13F22BF48800016F911 /* UI */,
 				E13F6F7622BDF544001FDCCE /* AppDelegate.swift */,
 				E13F6F7A22BDF544001FDCCE /* Main.storyboard */,
-				E1928BB522C1E00800E82C0B /* Model */,
 				E13F6F7D22BDF544001FDCCE /* Assets.xcassets */,
 				E13F6F7F22BDF544001FDCCE /* LaunchScreen.storyboard */,
 				E13F6F8222BDF544001FDCCE /* Info.plist */,

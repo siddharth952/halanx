@@ -80,7 +80,7 @@ func Login(_ user:String,_ pwd:String){
                 }
             }
             else{
-                print("Error \(response.result.error)")
+                print("Error \(String(describing: response.result.error))")
                 
             }
     }
