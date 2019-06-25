@@ -86,3 +86,14 @@ func Login(_ user:String,_ pwd:String){
     }
  }
 }
+
+
+//Dismiss Keyboard Wehen Return Tapped
+extension SignInViewController: UITextFieldDelegate{
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+}
