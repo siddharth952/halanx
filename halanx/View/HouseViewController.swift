@@ -16,8 +16,10 @@ class HouseViewController: UIViewController, UITableViewDataSource, UITableViewD
     //Constants
     let URL_GET_DATA = "http://testapi.halanx.com/homes/houses/?accomodation_allowed=girls%2Cboys%2Cfamily&accomodation_type=flat%2Cshared%2Cprivate&format=json&furnish_type=full%2Csemi&house_type=independent%2Cvilla%2Capartment&latitude=28.6554&longitude=77.1646&radius=5&rent_max=20000&rent_min=1000"
     
-    
+    //Outlets
     @IBOutlet weak var houseTableView: UITableView!
+    
+    
     
     var houses = [House]()
     
@@ -35,7 +37,19 @@ class HouseViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.houseRent.text = house.rent
         cell.houseAddress.text = house.street_address
         
-        
+        //Image Corner Radius
+        cell.houseImg.layer.cornerRadius = 10.0
+        cell.contentView.layer.cornerRadius = 2.0
+        cell.contentView.layer.borderWidth = 1.0
+        cell.contentView.layer.borderColor = UIColor.clear.cgColor
+        cell.contentView.layer.masksToBounds = true
+        cell.layer.shadowColor = UIColor.lightGray.cgColor
+        cell.layer.shadowOffset = CGSize(width: 0, height: 2.0)
+        cell.layer.shadowRadius = 2.0
+        cell.layer.shadowOpacity = 1.0
+        cell.layer.masksToBounds = false
+        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+
         Alamofire.request(house.imageurl!).responseImage { response in
             if let image = response.result.value {
                 cell.houseImg.image = image
@@ -50,11 +64,11 @@ class HouseViewController: UIViewController, UITableViewDataSource, UITableViewD
 
         Alamofire.request(URL_GET_DATA).responseJSON { response in
             
-           let json = JSON (response.result.value)
+            let json = JSON (response.result.value!)
             
             if (true) {
 
-                let housesArray:NSArray = json["results"].arrayObject as! NSArray
+                let housesArray:NSArray = json["results"].arrayObject! as NSArray
                 
                 for i in 0..<housesArray.count{
 

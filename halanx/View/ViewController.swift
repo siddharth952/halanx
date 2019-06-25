@@ -20,7 +20,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loginBtn.dropShadow()
+        facebookBtn.dropShadow()
     }
 
 

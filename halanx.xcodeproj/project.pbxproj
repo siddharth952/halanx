@@ -20,6 +20,7 @@
 		E149E14122BF493D0016F911 /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149E14022BF493D0016F911 /* RoundImage.swift */; };
 		E149E14622BF58960016F911 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E149E14522BF58960016F911 /* SignInViewController.swift */; };
 		E165D88522C07BEF009F0C37 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E165D88422C07BEF009F0C37 /* DetailsViewController.swift */; };
+		E1928BB922C1E53F00E82C0B /* DropShadowUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1928BB822C1E53F00E82C0B /* DropShadowUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		E149E14022BF493D0016F911 /* RoundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImage.swift; sourceTree = "<group>"; };
 		E149E14522BF58960016F911 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		E165D88422C07BEF009F0C37 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		E1928BB822C1E53F00E82C0B /* DropShadowUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropShadowUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,8 @@
 		E1250CB322BF5EEF000FEF7F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E12C27F422C0BC20005D9403 /* HouseTableViewCell.swift */,
+				E12C27F822C0BF7D005D9403 /* HouseViewController.swift */,
 				E149E14522BF58960016F911 /* SignInViewController.swift */,
 				E13F6F7822BDF544001FDCCE /* ViewController.swift */,
 				E165D88422C07BEF009F0C37 /* DetailsViewController.swift */,
@@ -97,9 +101,7 @@
 				E149E13F22BF48800016F911 /* UI */,
 				E13F6F7622BDF544001FDCCE /* AppDelegate.swift */,
 				E13F6F7A22BDF544001FDCCE /* Main.storyboard */,
-				E12C27FA22C0C0DE005D9403 /* House.swift */,
-				E12C27F822C0BF7D005D9403 /* HouseViewController.swift */,
-				E12C27F422C0BC20005D9403 /* HouseTableViewCell.swift */,
+				E1928BB522C1E00800E82C0B /* Model */,
 				E13F6F7D22BDF544001FDCCE /* Assets.xcassets */,
 				E13F6F7F22BDF544001FDCCE /* LaunchScreen.storyboard */,
 				E13F6F8222BDF544001FDCCE /* Info.plist */,
@@ -112,8 +114,17 @@
 			children = (
 				E149E13D22BF48780016F911 /* RoundButton.swift */,
 				E149E14022BF493D0016F911 /* RoundImage.swift */,
+				E1928BB822C1E53F00E82C0B /* DropShadowUIView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		E1928BB522C1E00800E82C0B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E12C27FA22C0C0DE005D9403 /* House.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F629573E4F1497E6DB84AE04 /* Pods */ = {
@@ -258,6 +269,7 @@
 				E149E14622BF58960016F911 /* SignInViewController.swift in Sources */,
 				E13F6F7722BDF544001FDCCE /* AppDelegate.swift in Sources */,
 				E12C27F922C0BF7D005D9403 /* HouseViewController.swift in Sources */,
+				E1928BB922C1E53F00E82C0B /* DropShadowUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

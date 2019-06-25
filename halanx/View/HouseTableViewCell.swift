@@ -19,6 +19,7 @@ class HouseTableViewCell: UITableViewCell {
     
     @IBOutlet weak var houseAddress: UILabel!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

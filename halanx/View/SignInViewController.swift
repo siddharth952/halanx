@@ -22,9 +22,19 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var errorLbl: UILabel!
     
-
+    @IBOutlet weak var loginBtn: MyButton!
+    
     override func viewDidLoad() {
-        super.viewDidLoad()     
+        super.viewDidLoad()
+        usernameField.layer.cornerRadius = 10.0
+        usernameField.clipsToBounds = true
+        
+        passwordField.layer.cornerRadius = 10.0
+        passwordField.clipsToBounds = true
+        
+        usernameField.dropShadow()
+        passwordField.dropShadow()
+        loginBtn.dropShadow()
     }
 
     override func viewWillAppear(_ animated: Bool) {
