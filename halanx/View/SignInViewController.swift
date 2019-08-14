@@ -14,7 +14,7 @@ class SignInViewController: UIViewController {
     
     //Constants
     let AUTH_URL = "http://testapi.halanx.com/rest-auth/login/"
-    let APP_ID:JSON = "0f948ebc7f620891adde46a8b1d1049cc7d56fcc"
+    let APP_ID:JSON = "bc16975846eddb6ee0e29cbccb7a484cd287038b"
     
     // MARK: - Outlets
 
